@@ -10,11 +10,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1> hello from the main</h1>
+        <h1> Main</h1>
       </main>
 
       <footer>
-        <h1> hello from the footer</h1>
+        <h1> Footer</h1>
       </footer>
     </div>
   );
