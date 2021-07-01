@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 export default function Subscribe() {
-  //Create a reference to the input 
+  //Create a reference to the input
   const inputEl = useRef(null);
   //Hold a message in state to handle the response from our API.
   const [message, setMessage] = useState("");
@@ -35,22 +35,25 @@ export default function Subscribe() {
   };
 
   return (
-    <form onSubmit={subscribe}>
-      <label htmlFor="email-input">{"Email Address"}</label>
-      <input
-        id="email-input"
-        name="email"
-        placeholder="andrewis@awesome.com"
-        ref={inputEl}
-        required
-        type="email"
-      />
-      <div>
-        {message
-          ? message
-          : `We'll only send emails when new announcements are posted. No spam.`}
-      </div>
-      <button type="submit">{"✨✨✨✨✨✨ Subscribe ✨✨✨✨✨✨✨"}</button>
-    </form>
+    <div className="flex justify-center">
+      <form onSubmit={subscribe} className="flex flex-col w-1/2">
+        <label className="pt-16"htmlFor="email-input">{"Email Address"}</label>
+        <input
+          id="email-input"
+          name="email"
+          placeholder="andrewis@awesome.com"
+          ref={inputEl}
+          required
+          type="email"
+          className="py-2"
+        />
+        <div className="pt-3 pb-3">
+          {message
+            ? message
+            : `We'll only send emails when new announcements are posted. No spam.`}
+        </div>
+        <button type="submit" className="bg-green-primary hover:bg-black text-white font-bold py-3 px-4 rounded">{"Subscribe"}</button>
+      </form>
+    </div>
   );
 }

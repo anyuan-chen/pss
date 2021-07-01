@@ -8,7 +8,7 @@ module.exports = {
         "brown-pattern": "url('https://i.imgur.com/6DDGW53.png')",
         "blurred-crowd": "url('https://i.imgur.com/6MWF6NL.png')",
         "blurred-brightened-crowd": "url('https://i.imgur.com/Q5zhlwA.png')",
-        "two-times-crowd" : "url('https://i.imgur.com/5foLrpZ.png')"
+        "two-times-crowd": "url('https://i.imgur.com/5foLrpZ.png')",
       }),
       colors: {
         green: {
@@ -25,5 +25,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

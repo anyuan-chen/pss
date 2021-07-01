@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.52",
+    "@tailwindcss/forms": "^0.3.3",
     "axios": "^0.21.1",
     "next": "latest",
     "react": "^17.0.2",
