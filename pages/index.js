@@ -8,7 +8,6 @@ export default function Home() {
     <div className="flex flex-col items-center h-screen">
       <main>
         <Navbar></Navbar>
-
         <div className="bg-two-times-crowd w-screen flex flex-col pl-20 pb-48">
           <h3 className="text-black font-extrabold text-6xl w-4/5 pt-24 pb-48">
             Inspiring the next generation of great speakers
