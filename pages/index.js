@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "../components/navbar";
+import Box from "../components/box";
 
 export default function Home() {
   return (
@@ -9,11 +10,16 @@ export default function Home() {
         <Navbar></Navbar>
       </Head>
 
-      <main className="bg-two-times-crowd w-screen flex justify-center ">
-        <h3 className="text-green-dark font-extrabold text-6xl h-96 w-4/5 pt-14">
-          Inspiring the next generation of great speakers
-        </h3>
-        
+      <main>
+        <div className="bg-two-times-crowd w-screen flex justify-center ">
+          <h3 className="text-green-dark font-extrabold text-6xl h-96 w-4/5 pt-14">
+            Inspiring the next generation of great speakers
+          </h3>
+        </div>
+        <div>
+          <Box title="What's public speaking?" body="We're dumb "></Box>
+          <Box title = "Why public speaking?" body="KEKW"></Box>
+        </div>
       </main>
 
       <footer className="w-4/5">
