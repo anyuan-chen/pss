@@ -11,14 +11,27 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="bg-two-times-crowd w-screen flex justify-center ">
-          <h3 className="text-green-dark font-extrabold text-6xl h-96 w-4/5 pt-14">
+        <div className="bg-two-times-crowd w-screen flex flex-col pl-20 pb-48">
+          <h3 className="text-black font-extrabold text-6xl w-4/5 pt-24 pb-48">
             Inspiring the next generation of great speakers
           </h3>
+          <button class="bg-gray-800 bg-opacity-50 hover:bg-black text-white font-semibold max-w-xs hover:text-white py-6 hover:border-transparent rounded">
+            Join us today
+          </button>
         </div>
-        <div>
-          <Box title="What's public speaking?" body="We're dumb "></Box>
-          <Box title = "Why public speaking?" body="KEKW"></Box>
+        <div className="grid grid-cols-3">
+          <Box
+            title="What's public speaking?"
+            body="At et kasd est at aliquyam dolores erat. Takimata diam et ipsum takimata. Tempor sadipscing lorem takimata sed kasd elitr."
+          ></Box>
+          <Box
+            title="Why public speaking?"
+            body="Ipsum accusam sea et sea dolores duo duo nonumy et tempor. Est sit clita eirmod est. Et invidunt consetetur consetetur."
+          ></Box>
+          <Box
+            title="Who are we?"
+            body="Eirmod lorem sit gubergren stet vero ut invidunt voluptua eos. Lorem diam sit sit duo. Tempor consetetur lorem dolor gubergren."
+          ></Box>
         </div>
       </main>
 
