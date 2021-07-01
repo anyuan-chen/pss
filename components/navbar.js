@@ -3,7 +3,7 @@ import Link from "next/link";
 /*
   This is a navbar component designed for use on all pages. 
 */
-export default function navbar() {
+export default function Navbar() {
   return (
     <div>
       <nav className="bg-green-dark h-36">
@@ -34,7 +34,7 @@ export default function navbar() {
               <Link href="/">
                 <a className="text-white px-4">Events and Programs</a>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
                 <a className="text-white px-4">Contact</a>
               </Link>
             </div>
