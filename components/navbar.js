@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link"
+import Link from "next/link";
 
 export default function navbar() {
   return (
@@ -15,9 +15,6 @@ export default function navbar() {
               <h1 className="text-white text-2xl font-Poppins font-semibold">
                 Public Schools Speech Organization
               </h1>
-              <h3 className="text-white">
-                Inspiring the next generation of great speakers
-              </h3>
             </div>
           </li>
           <li className="flex items-center">

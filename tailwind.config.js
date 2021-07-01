@@ -4,6 +4,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        "brown-pattern": "url('https://i.imgur.com/6DDGW53.png')",
+        "blurred-crowd": "url('https://i.imgur.com/6MWF6NL.png')",
+        "blurred-brightened-crowd": "url('https://i.imgur.com/Q5zhlwA.png')",
+        "two-times-crowd" : "url('https://i.imgur.com/5foLrpZ.png')"
+      }),
       colors: {
         green: {
           primary: "#1c6e28",
