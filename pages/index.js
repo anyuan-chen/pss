@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer"
 import Box from "../components/box";
 
 export default function Home() {
@@ -32,8 +33,8 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="w-4/5">
-        <h1> Footer</h1>
+      <footer className="w-full">
+        <Footer></Footer>
       </footer>
     </div>
   );
