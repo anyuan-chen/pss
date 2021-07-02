@@ -36,7 +36,7 @@ export default function Subscribe() {
 
   return (
     <div className="flex justify-center">
-      <form onSubmit={subscribe} className="flex flex-col w-1/2">
+      <form onSubmit={subscribe} className="flex flex-col">
         <label className="pt-16"htmlFor="email-input">{"Email Address"}</label>
         <input
           id="email-input"
