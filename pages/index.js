@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 import Box from "../components/box";
 
 export default function Home() {
@@ -13,9 +13,13 @@ export default function Home() {
           <h3 className="text-black font-extrabold text-6xl w-4/5 pt-24 pb-48">
             Inspiring the next generation of great speakers
           </h3>
-          <button class="bg-gray-800 bg-opacity-50 hover:bg-black text-white font-semibold max-w-xs hover:text-white py-6 hover:border-transparent rounded">
-            Join us today
-          </button>
+          <Link href="/contact">
+            <a>
+              <button className="bg-gray-800 bg-opacity-50 hover:bg-black text-white font-semibold max-w-xs hover:text-white py-6 px-20 hover:border-transparent rounded">
+                Join us today
+              </button>
+            </a>
+          </Link>
         </div>
         <div className="grid grid-cols-3">
           <Box

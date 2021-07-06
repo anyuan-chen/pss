@@ -31,7 +31,7 @@ export default function Navbar() {
               <Link href="/meettheteam">
                 <a className="text-white px-4">Meet The Team</a>
               </Link>
-              <Link href="/">
+              <Link href="/eventsandprograms">
                 <a className="text-white px-4">Events and Programs</a>
               </Link>
               <Link href="/contact">
