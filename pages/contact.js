@@ -4,36 +4,36 @@ import Subscribe from "../components/subscribe";
 import Socials from "../components/socials";
 import Footer from "../components/footer";
 export default function Contact() {
-  const [invalidEmail, setInvalidEmail] = useState(false);
-  const validateEmail = (email) => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [invalidEmail, setInvalidEmail] = useState(false);
+  function validateEmail(addr) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(addr);
+  }
 
   const updateName = (event) => {
     setName(event.target.value);
   };
   const updateEmail = (event) => {
-    setEmail(event.target.email);
+    setEmail(event.target.value);
   };
   const updateSubject = (event) => {
-    setSubject(event.target.subject);
+    setSubject(event.target.value);
   };
   const updateMessage = (event) => {
-    setMessage(event.target.message);
+    setMessage(event.target.value);
   };
 
   const submitForm = (event) => {
     event.preventDefault();
-    console.log("form is working");
-    if (validateEmail(email)){
+    console.log(email);
+    console.log(validateEmail(email));
+    if (validateEmail(email) === true) {
       setInvalidEmail(false);
-    }
-    else{
+    } else {
       setInvalidEmail(true);
     }
   };
@@ -79,15 +79,21 @@ export default function Contact() {
                 value={email}
                 onChange={updateEmail}
                 placeholder="Email"
-                className= {invalidEmail ? "border border-b border-black border-t-0 border-l-0 border-r-0 bg-red-50" : "border border-b border-black border-t-0 border-l-0 border-r-0 "}
+                className={
+                  invalidEmail
+                    ? "border border-b border-black border-t-0 border-l-0 border-r-0 bg-red-50"
+                    : "border border-b border-black border-t-0 border-l-0 border-r-0 "
+                }
               ></input>
             </div>
             <input
+              
               type="text"
               value={subject}
               onChange={updateSubject}
               placeholder="Subject"
               className="border border-b border-black border-t-0 border-l-0 border-r-0 "
+              
             ></input>
             <textarea
               value={message}
