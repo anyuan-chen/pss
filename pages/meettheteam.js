@@ -6,7 +6,7 @@ export default function MeetTheTeam() {
   return (
     <div>
       <div>
-        <div className="h-screen">
+        <div className="h-screen bg-green-dark">
           <Navbar></Navbar>
           <div className="h-4/5 grid grid-rows-2">
             <div className="bg-green-darker text-white flex justify-center">
@@ -45,7 +45,7 @@ export default function MeetTheTeam() {
             </div>
           </div>
         </div>
-        <header className="flex justify-center text-6xl pt-8 pb-10">
+        <header className="flex justify-center text-6xl pt-8 pb-10 bg-green-darker text-white font-bold">
           Meet Our Team
         </header>
         <main>
