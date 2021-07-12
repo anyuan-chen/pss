@@ -5,7 +5,7 @@ import Subscribe from "./subscribe";
 
 export default function Footer() {
   return (
-    <div className="bg-green-darker mt-40 w-full pb-10">
+    <div className="bg-green-900 w-full pb-10">
       <div className=" grid grid-cols-1 md:grid-cols-3">
         <div className="hidden md:flex flex-col items-center ">
           <h1 className="text-white text-lg pb-4 py-8">Navigate</h1>
