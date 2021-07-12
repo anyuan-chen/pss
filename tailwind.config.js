@@ -9,6 +9,7 @@ module.exports = {
         "blurred-crowd": "url('https://i.imgur.com/6MWF6NL.png')",
         "blurred-brightened-crowd": "url('https://i.imgur.com/Q5zhlwA.png')",
         "two-times-crowd": "url('https://i.imgur.com/5foLrpZ.png')",
+        "microphonecrowd": "url('https://static-cse.canva.com/blob/136515/20-public-speaking-tips-even-the-experts-use..png')"
       }),
       colors: {
         green: {

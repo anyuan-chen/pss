@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Socials from "./socials";
-import Subscribe from "./subscribe"
+import Subscribe from "./subscribe";
 
 export default function Footer() {
   return (
-    <div className="bg-green-primary mt-40 w-full pb-10">
-      <div className="flex flex-row justify-evenly">
-        <div className="">
+    <div className="bg-green-darker mt-40 w-full pb-10">
+      <div className=" grid grid-cols-1 md:grid-cols-3">
+        <div className="hidden md:flex flex-col items-center ">
           <h1 className="text-white text-lg pb-4 py-8">Navigate</h1>
           <nav>
             <ul>
@@ -34,7 +34,7 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
-        <div className="">
+        <div className="hidden md:flex flex-col items-center">
           <h1 className="text-white text-lg pb-4 py-8">Social Links</h1>
           <nav>
             <ul>
@@ -61,7 +61,9 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
-        <Subscribe alt="true"></Subscribe>
+        <div className="inline px-8 md:px-0 ">
+          <Subscribe alt="true"></Subscribe>
+        </div>
       </div>
       <div className="flex justify-center pt-5">
         <p className="text-white">Created by Andrew Chen ©2021 </p>
