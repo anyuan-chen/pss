@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import Subscribe from "../components/subscribe";
 import Socials from "../components/socials";
 import Footer from "../components/footer";
 export default function Contact() {
-  
+  const [invalidEmail, setInvalidEmail] = useState(false);
+  const validateEmail = (email) => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const updateName = (event) => {
+    setName(event.target.value);
+  };
+  const updateEmail = (event) => {
+    setEmail(event.target.email);
+  };
+  const updateSubject = (event) => {
+    setSubject(event.target.subject);
+  };
+  const updateMessage = (event) => {
+    setMessage(event.target.message);
+  };
+
+  const submitForm = (event) => {
+    event.preventDefault();
+    console.log("form is working");
+    if (validateEmail(email)){
+      setInvalidEmail(false);
+    }
+    else{
+      setInvalidEmail(true);
+    }
+  };
   return (
     <div className="flex flex-col justify-center">
       <Navbar></Navbar>
@@ -33,13 +65,36 @@ export default function Contact() {
               ></img>
             </a>
           </div>
-          <form className="flex flex-col gap-y-2">
+          <form className="flex flex-col gap-y-2" onSubmit={submitForm}>
             <div className="grid grid-cols-2 gap-4">
-              <input type="text" placeholder="Name" className="border border-b border-black border-t-0 border-l-0 border-r-0"></input>
-              <input type="text" placeholder="Email" className="border border-b border-black border-t-0 border-l-0 border-r-0"></input>
+              <input
+                type="text"
+                value={name}
+                onChange={updateName}
+                placeholder="Name"
+                className="border border-b border-black border-t-0 border-l-0 border-r-0 "
+              ></input>
+              <input
+                type="text"
+                value={email}
+                onChange={updateEmail}
+                placeholder="Email"
+                className= {invalidEmail ? "border border-b border-black border-t-0 border-l-0 border-r-0 bg-red-50" : "border border-b border-black border-t-0 border-l-0 border-r-0 "}
+              ></input>
             </div>
-            <input type="text" placeholder="Subject" className="border border-b border-black border-t-0 border-l-0 border-r-0"></input>
-            <textarea placeholder="Write your message here" className="border border-b border-black border-t-0 border-l-0 border-r-0"></textarea>
+            <input
+              type="text"
+              value={subject}
+              onChange={updateSubject}
+              placeholder="Subject"
+              className="border border-b border-black border-t-0 border-l-0 border-r-0 "
+            ></input>
+            <textarea
+              value={message}
+              onChange={updateMessage}
+              placeholder="Write your message here"
+              className="border border-b border-black border-t-0 border-l-0 border-r-0 "
+            ></textarea>
             <button
               type="submit"
               className="bg-green-darker px-10 py-3 text-white hover:opacity-50 rounded"
