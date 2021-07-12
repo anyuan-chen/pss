@@ -14,9 +14,11 @@ export default function person(props) {
       <div className="flex items-center flex-col">
         <h1 className="pt-10 pb-5 text-3xl">{props.name}</h1>
         <h2 className="pb-8 text-xl">{props.title}</h2>
-        <p className="px-24 text-lg">{props.desc}</p>
+        <p className="hidden px-24 text-lg md:inline ">{props.desc}</p>
       </div>
-      <img src={props.imgUrl}></img>
+      <div className="flex justify-center">
+        <img className="object-cover" src={props.imgUrl}></img>
+      </div>
     </div>
   );
 }

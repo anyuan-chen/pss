@@ -1,14 +1,52 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Person from "../components/person";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 export default function MeetTheTeam() {
   return (
     <div>
-      <Navbar></Navbar>
       <div>
+        <div className="h-screen">
+          <Navbar></Navbar>
+          <div className="h-4/5 grid grid-rows-2">
+            <div className="bg-green-darker text-white flex justify-center">
+              <div className="w-1/2 flex flex-col justify-center">
+                <h1 className="text-lg md:text-4xl lg:text-6xl font-bold py-4">
+                  Who We Are
+                </h1>
+                <p className="text-s md:base">
+                  Public Schools Speech Organization (PSSO) is a community
+                  organization led by students with a passion for public
+                  speaking. PSSO was created on the foundation that public
+                  speaking should be accessible to everyone. Currently, the
+                  public speaking community is dominated by private school
+                  students who are able to gain competitive advantages through
+                  exclusive access to resources and connections. PSSO works to
+                  bridge the gap between public school students and the world of
+                  public speaking. We share our knowledge and experience with
+                  students across the Greater Toronto Area to help students find
+                  their voice.
+                </p>
+              </div>
+            </div>
+            <div className="bg-green-dark text-white flex justify-center">
+              <div className="w-1/2 flex flex-col justify-center">
+                <h1 className="text-lg md:text-4xl lg:text-6xl font-bold py-4">
+                  Mission Statement
+                </h1>
+                <p className="text-s md:base">
+                  Public Schools Speech Organization (PSSO) aims to connect and
+                  grow the public speaking community among public school
+                  students in the Greater Toronto Area. We focus on encouraging
+                  students to explore their potential, improve their skills, and
+                  pursue opportunities in public speaking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <header className="flex justify-center text-6xl pt-8 pb-10">
-          <h1>Meet Our Team</h1>
+          Meet Our Team
         </header>
         <main>
           <Person
