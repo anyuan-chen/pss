@@ -4,10 +4,10 @@ import Subscribe from "../components/subscribe";
 import Socials from "../components/socials";
 import Footer from "../components/footer";
 export default function Contact() {
-  const [name, setName] = useState(" ");
-  const [email, setEmail] = useState(" ");
-  const [subject, setSubject] = useState(" ");
-  const [message, setMessage] = useState(" ");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const [invalidEmail, setInvalidEmail] = useState(false);
   function validateEmail(addr) {
     var re = /\S+@\S+\.\S+/;
