@@ -4,10 +4,10 @@ import Subscribe from "../components/subscribe";
 import Socials from "../components/socials";
 import Footer from "../components/footer";
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState(" ");
+  const [email, setEmail] = useState(" ");
+  const [subject, setSubject] = useState(" ");
+  const [message, setMessage] = useState(" ");
   const [invalidEmail, setInvalidEmail] = useState(false);
   function validateEmail(addr) {
     var re = /\S+@\S+\.\S+/;
@@ -27,12 +27,30 @@ export default function Contact() {
     setMessage(event.target.value);
   };
 
-  const submitForm = (event) => {
+  const submitForm = async (event) => {
     event.preventDefault();
     console.log(email);
     console.log(validateEmail(email));
+    let data = {
+      name,
+      email,
+      subject,
+      message,
+    };
     if (validateEmail(email) === true) {
       setInvalidEmail(false);
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (res.status === 200) {
+        console.log("response submitted");
+       
+      }
     } else {
       setInvalidEmail(true);
     }
@@ -87,13 +105,11 @@ export default function Contact() {
               ></input>
             </div>
             <input
-              
               type="text"
               value={subject}
               onChange={updateSubject}
               placeholder="Subject"
               className="border border-b border-black border-t-0 border-l-0 border-r-0 "
-              
             ></input>
             <textarea
               value={message}
